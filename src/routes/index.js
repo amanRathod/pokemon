@@ -6,19 +6,20 @@ import RenderLoader from '../util/objects/loader';
 import ErrorFallback from '../components/public/error_boundary';
 
 const Home = lazy(() => import('../view/public/home'));
+const Detail = lazy(() => import('../pages/detail'));
 
 function App() {
-
   return (
-      <Router>
-        <ErrorBoundary FallbackComponent={ErrorFallback}>
-          <Suspense fallback={RenderLoader()}>
-            <Switch>
-              <Route path={ROUTES.HOME} component={Home} />
-            </Switch>
-          </Suspense>
-        </ErrorBoundary>
-      </Router>
+    <Router>
+      <ErrorBoundary FallbackComponent={ErrorFallback}>
+        <Suspense fallback={RenderLoader()}>
+          <Switch>
+            <Route path={ROUTES.DETAIL} component={Detail} />
+            <Route path={ROUTES.HOME} component={Home} />
+          </Switch>
+        </Suspense>
+      </ErrorBoundary>
+    </Router>
   );
 }
 
