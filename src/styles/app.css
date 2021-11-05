@@ -716,6 +716,7 @@ video {
   margin-top: 1rem;
   margin-right: 1rem;
   max-width: 20rem;
+  cursor: pointer;
   border-radius: 1rem;
   --tw-bg-opacity: 1;
   background-color: rgba(33, 150, 243, var(--tw-bg-opacity));

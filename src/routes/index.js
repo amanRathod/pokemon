@@ -30,8 +30,8 @@ function App() {
               <PublicRoute path={ROUTES.SIGNUP} component={Signup} />
               <PublicRoute path={ROUTES.FORGOT_PASSWORD} component={ForgotPassword} />
               <PublicRoute path={ROUTES.RESET_PASSWORD} component={ResetPassword} />
+              <PrivateRoute path={ROUTES.HOME} component={Home} exact />
               <PrivateRoute path={ROUTES.DETAIL} component={Detail} />
-              <PrivateRoute path={ROUTES.HOME} component={Home} />
               <PrivateRoute path={ROUTES.FAVOURITE} component={Favourite} />
             </Switch>
           </Suspense>

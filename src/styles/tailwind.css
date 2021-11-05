@@ -28,7 +28,7 @@
         @apply  w-80 px-5 py-2 text-white bg-gray-borderbg bg-opacity-30 border-t border-white border-opacity-20 border-solid  shadow-2xl rounded-xl tracking-tighter text-base focus:outline-none;
       }
       .btn {
-        @apply py-2 max-w-xs px-4 mr-4 mt-4 font-bold rounded-2xl bg-blue-five text-white tracking-tighter text-base;
+        @apply py-2 max-w-xs px-4 mr-4 mt-4 cursor-pointer font-bold rounded-2xl bg-blue-five text-white tracking-tighter text-base;
       }
       .underline-link {
         @apply  border-b-4 cursor-pointer border-headerWhite  hover:border-blue-five dark:hover:border-blue-five dark:border-darkMode-base duration-500;

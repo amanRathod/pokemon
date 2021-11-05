@@ -1,12 +1,11 @@
 /* eslint-disable prettier/prettier */
 import React, { useContext } from 'react';
 import PokemonContext from '../util/context/pokemon';
-import ListView from '../components/private/list';
+import { ListView } from '../components/private';
 
 const List = () => {
   const { data, pokemon, search } = useContext(PokemonContext);
-  console.log('datatat', data);
-  console.log('pokemon', pokemon);
+  console.log(data);
 
   return (
   <div>

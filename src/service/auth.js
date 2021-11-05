@@ -7,7 +7,9 @@ const config = {
 
 export async function UserLogin(data) {
   try {
+    console.log(data);
     const response = await axios.post(`${link}/login`, data, config);
+    console.log(response);
     return response.data;
   } catch (err) {
     console.log(err);
