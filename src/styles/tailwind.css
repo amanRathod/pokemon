@@ -1,4 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
+@layer components {
+    .row {
+        @apply flex items-center justify-center ;
+      }
+      .col {
+        @apply flex flex-col items-center justify-center;
+      }
+      .box2 {
+        @apply w-96 col h-auto row border-gray-base border-opacity-10 p-4  border-2;
+      }
+    .bg-gradient {
+        @apply bg-gradient-to-l from-black-left  to-black-right;
+      }
+    .glass-morphism {
+        @apply flex w-96 h-auto flex-col bg-gray-formbg  bg-opacity-30 items-center p-4  mb-4 rounded-2xl  border-2 backdrop-blur-md shadow-2xl;
+      }
+      .dark-nine {
+        @apply text-blue-nine dark:text-blue-two
+      } 
+      .focus-ring {
+        @apply focus:outline-none focus:ring-4 focus:ring-blue-seven dark:focus:ring-darkMode-blue focus:ring-offset-2 duration-500;
+      }
+      .input-control1 {
+        @apply  w-80 px-5 py-2 text-white bg-gray-borderbg bg-opacity-30 border-t border-white border-opacity-20 border-solid  shadow-2xl rounded-xl tracking-tighter text-base focus:outline-none;
+      }
+      .btn {
+        @apply py-2 max-w-xs px-4 mr-4 mt-4 font-bold rounded-2xl bg-blue-five text-white tracking-tighter text-base;
+      }
+      .underline-link {
+        @apply  border-b-4 cursor-pointer border-headerWhite  hover:border-blue-five dark:hover:border-blue-five dark:border-darkMode-base duration-500;
+      }
+      .text-color {
+        @apply dark-nine text-lg font-semibold ;
+      }
+      .error {
+        @apply text-red-primary mb-3 break-normal;
+      }
+
+}

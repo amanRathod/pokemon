@@ -6,7 +6,7 @@ import warning from '../../asserts/warning-sign.svg';
 const ErrorFallback = ({ error, componentStack, resetErrorBoundary }) => (
   <div
     role="alert"
-    className="flex justify-center items-center h-screen bg-darkMode-base text-darkMode-orange"
+    className="flex justify-center items-center h-screen bg-darkMode-base text-darkMode-blue"
   >
     <img src={warning} alt="Loading..." />
     <p>Something went wrong:</p>
