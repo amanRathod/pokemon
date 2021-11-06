@@ -2,7 +2,7 @@
 import axios from 'axios';
 import jwt from 'jwt-decode';
 
-const url = 'http://localhost:5000/api/v1/user';
+const url = 'https://pokemon-favourite.herokuapp.com/api/v1/user';
 
 const token = localStorage.getItem('token');
 const config = {

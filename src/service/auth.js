@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const link = 'http://localhost:5000/api/v1/auth';
+const link = 'https://pokemon-favourite.herokuapp.com/api/v1/auth';
 const config = {
   headers: { 'Content-type': 'application/json' }
 };
