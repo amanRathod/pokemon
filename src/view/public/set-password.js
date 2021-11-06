@@ -4,9 +4,8 @@ import React, { useState } from 'react';
 import { useParams, Link, useHistory } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
 import FormInputPassword from '../../components/input/password';
-import ValidateConfirmPassword from '../../util/validation/confirm-password';
+import { ValidateConfirmPassword, ValidatePassword } from '../../util/validation';
 import { UserResetPassword } from '../../service/auth';
-import ValidatePassword from '../../util/validation/password';
 
 const SetPasswordView = () => {
   const history = useHistory();
@@ -43,7 +42,7 @@ const SetPasswordView = () => {
   const _handleSubmit = async (e) => {
     try {
       e.preventDefault();
-      const response = await UserResetPassword(state);
+      await UserResetPassword(state);
       state.password = '';
       state.confirmPassword = '';
       history.push(ROUTES.LOGIN);

@@ -2,10 +2,15 @@
 import axios from 'axios';
 import jwt from 'jwt-decode';
 
-const url = 'http://localhost:5000/api/v1/user/';
+const url = 'http://localhost:5000/api/v1/user';
 
 const token = localStorage.getItem('token');
-const decode = jwt(localStorage.getItem('token'));
+const config = {
+  headers: {
+    'Content-type': 'application/json',
+    Authorization: `Bearer ${token}`
+  }
+};
 
 // check if token time is expired or not
 const isTokenExpired = () => {
@@ -33,16 +38,10 @@ checkTokenExpired();
 
 export async function addFavourite(name) {
   try {
-    const token = localStorage.getItem('token');
-
-    const config = {
-      headers: {
-        'Content-type': 'application/json',
-        Authorization: `Bearer ${token}`
-      }
+    const state = {
+      name
     };
-    console.log('config', config);
-    const response = await axios.put(`${url}/favourite/${name}/${decode.id}`, config);
+    const response = await axios.put(`${url}/favourite`, state, config);
     return response.data;
   } catch (err) {
     console.log(err);
@@ -51,16 +50,7 @@ export async function addFavourite(name) {
 
 export async function GetUserData() {
   try {
-    const token = localStorage.getItem('token');
-
-    const config = {
-      headers: {
-        'Content-type': 'application/json',
-        Authorization: `Bearer ${token}`
-      }
-    };
-    console.log('con', config);
-    const response = await axios.get(`${url}/${decode.id}`, config);
+    const response = await axios.get(`${url}/getUserData`, config);
     return response.data;
   } catch (err) {
     console.log(err);

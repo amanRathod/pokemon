@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { LogoutIcon } from '@heroicons/react/solid';
 import * as ROUTES from '../../constants/routes';
 import DarkMode from '../public/dark_mode';
 import Search from './search';
 
-// eslint-disable-next-line react/prop-types
 const Header = ({ handleChange }) => {
   const history = useHistory();
 
@@ -18,13 +18,17 @@ const Header = ({ handleChange }) => {
       console.log(err);
     }
   };
+  const handleClick = (e) => {
+    e.preventDefault();
+    history.push(ROUTES.HOME);
+  };
 
   return (
-    <header className="h-16 bg-headerWhite  dark:bg-darkMode-base dark:text-blue-two text-blue-base border-gray-base shadow-md  border-b ">
+    <header className="header">
       <div className="container mx-auto max-w-screen-lg h-full">
         <div className="flex justify-between h-full">
           <div className=" text-center row cursor-pointer mt-2 mr-2 sm:block">
-            <Link to={ROUTES.HOME} className="ml-3 text-lg sm:text-3xl underline-link">
+            <Link onClick={handleClick} className="ml-3 text-lg sm:text-3xl underline-link">
               Pokemon
             </Link>
           </div>
@@ -54,3 +58,7 @@ const Header = ({ handleChange }) => {
 };
 
 export default Header;
+
+Header.propTypes = {
+  handleChange: PropTypes.func.isRequired
+};

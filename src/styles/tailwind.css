@@ -24,6 +24,15 @@
       .focus-ring {
         @apply focus:outline-none focus:ring-4 focus:ring-blue-seven dark:focus:ring-darkMode-blue focus:ring-offset-2 duration-500;
       }
+      .grid-list {
+        @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-3 m-8
+      }
+      .grid-box {
+        @apply dark:bg-darkMode-primary bg-blue-fifty dark:text-blue-two  dark:text-opacity-70 hover:shadow-sm w-80 rounded-2xl shadow-lg sm:ml-10 p-8 mb-10
+      }
+      .image {
+        @apply w-full rounded-xl bg-blue-one dark:bg-gray-base
+      }
       .input-control1 {
         @apply  w-80 px-5 py-2 text-white bg-gray-borderbg bg-opacity-30 border-t border-white border-opacity-20 border-solid  shadow-2xl rounded-xl tracking-tighter text-base focus:outline-none;
       }
@@ -38,6 +47,18 @@
       }
       .error {
         @apply text-red-primary mb-3 break-normal;
+      }
+      .readmore-button {
+        @apply  dark:hover:text-darkMode-base ml-auto flex items-center gap-1 h-16 border px-3  rounded-xl hover:text-blue-nine hover:bg-blue-fifty focus-ring
+      }
+      .card {
+        @apply dark:bg-darkMode-primary bg-blue-fifty text-blue-nine dark:text-blue-one hover:shadow-sm w-64 sm:w-80 rounded-2xl shadow-lg sm:ml-10 md:p-8 p-2 mb-10
+      }
+      .search-input {
+        @apply w-full h-10 pr-4 text-sm font-semibold text-blue-seven placeholder-blue-five bg-blue-fifty rounded-lg pl-9 placeholder-opacity-70 focus-ring
+      }
+      .header {
+        @apply h-16 bg-headerWhite  dark:bg-darkMode-base dark:text-blue-two border-gray-base shadow-md  border-b 
       }
 
 }

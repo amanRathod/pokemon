@@ -1,12 +1,8 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import FormInputEmail from '../../components/input/email';
-import FormInputPassword from '../../components/input/password';
-import FormInputName from '../../components/input/name';
-import ValidateEmail from '../../util/validation/email';
-import ValidatePassword from '../../util/validation/password';
-import ValidateConfirmPassword from '../../util/validation/confirm-password';
+import { FormInputName, FormInputEmail, FormInputPassword } from '../../components/input';
+import { ValidateEmail, ValidatePassword, ValidateConfirmPassword } from '../../util/validation';
 import { UserRegister } from '../../service/auth';
 import * as ROUTES from '../../constants/routes';
 

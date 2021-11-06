@@ -23,7 +23,7 @@ const Detail = () => {
   }, []);
 
   return (
-    <div className="bg-blue-50 dark:bg-darkMode-base">
+    <div className=" h-screen overflow-x-hidden dark:bg-darkMode-base">
       <Header />
       <div className="col m-10">
         {pokemonAppreance.color && (
@@ -31,7 +31,7 @@ const Detail = () => {
             <div className="flex flex-col sm:flex-row">
               <div>
                 <img
-                  className="w-full h-80 rounded-xl bg-blue-one dark:bg-gray-base"
+                  className="image w-full h-80 mt-10"
                   src={`https://img.pokemondb.net/artwork/large/${pokemonDetail.name}.jpg`}
                   alt="loading..."
                 />
@@ -41,7 +41,7 @@ const Detail = () => {
                   <h1>{pokemonDetail.name}</h1>
                 </div>
 
-                <div className="dark:bg-darkMode-primary bg-blue-fifty text-blue-nine dark:text-blue-one hover:shadow-sm w-36 sm:w-80  rounded-2xl shadow-lg sm:ml-10 md:p-8 p-4 mb-10 ">
+                <div className="card ">
                   <ul>
                     <li>
                       <strong>Height:&nbsp;&nbsp;</strong>
@@ -57,7 +57,7 @@ const Detail = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="dark:bg-darkMode-primary bg-blue-fifty text-blue-nine dark:text-blue-one hover:shadow-sm w-64 sm:w-80 rounded-2xl shadow-lg sm:ml-10 md:p-8 p-2 mb-10">
+                <div className="card">
                   <div className="text-center">
                     <h2>Appearance</h2>
                   </div>

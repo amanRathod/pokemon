@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 import * as ROUTES from '../constants/routes';
 import Theme from '../constants/theme';

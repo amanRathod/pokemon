@@ -1,11 +1,12 @@
+/* eslint-disable array-callback-return */
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
-import * as ROUTES from '../../constants/routes';
-import { ListView } from '../../pages';
+import { List } from '../../pages';
 import { Header } from '../../components/private';
 import PokemonContext from '../../util/context/pokemon';
 import { GetUserData } from '../../service/user';
+import * as ROUTES from '../../constants/routes';
 import { debounce } from '../../util/objects';
 
 const styles = {
@@ -18,6 +19,7 @@ const Home = () => {
   const [search, setSearch] = useState('');
   const [pokemon, setPokemon] = useState([]);
   const [favourite, setFavourite] = useState([]);
+
   const history = useHistory();
 
   const fetchPokemonData = async () => {
@@ -64,20 +66,22 @@ const Home = () => {
   }, [search]);
 
   return (
-    <div className="bg-gray-background h-full dark:bg-darkMode-base">
-      <PokemonContext.Provider value={{ data, pokemon, favourite, search, setFavourite }}>
-        <Header handleChange={handleChange} />
-        <div
-          className="btn text-center ml-9 sm:ml-16"
-          style={styles}
-          aria-hidden="true"
-          onClick={goToFavouritePage}
-        >
-          <h1>Favourite Pokemon</h1>
-        </div>
-        <ListView />
-      </PokemonContext.Provider>
-      <div>Footer</div>
+    <div className="bg-gray-background dark:bg-darkMode-base">
+      <Header handleChange={handleChange} />
+      <div className="h-full overflow-y-hidden">
+        <PokemonContext.Provider value={{ data, pokemon, favourite, search, setFavourite }}>
+          <div
+            className="btn text-center ml-9 sm:ml-16 "
+            style={styles}
+            aria-hidden="true"
+            onClick={goToFavouritePage}
+          >
+            <h1>Favourite Pokemon</h1>
+          </div>
+          <List />
+        </PokemonContext.Provider>
+      </div>
+      <div className="h-screen"> </div>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-// eslint-disable-next-line react/prop-types
 const Search = ({ handleChange }) => (
   <div className="mx-auto max-w-screen-md">
     <div className="relative mt-3 w-40 sm:w-64 md:w-96">
@@ -18,7 +18,7 @@ const Search = ({ handleChange }) => (
       </svg>
       <input
         type="text"
-        className="w-full h-10 pr-4 text-sm font-semibold text-blue-seven placeholder-blue-five bg-blue-fifty rounded-lg pl-9 placeholder-opacity-70 focus-ring"
+        className="search-input"
         placeholder="Search Pokemon"
         onChange={handleChange}
       />
@@ -27,3 +27,7 @@ const Search = ({ handleChange }) => (
 );
 
 export default Search;
+
+Search.propTypes = {
+  handleChange: PropTypes.func.isRequired
+};

@@ -5,7 +5,6 @@ import { ListView } from '../components/private';
 
 const List = () => {
   const { data, pokemon, search } = useContext(PokemonContext);
-  console.log(data);
 
   return (
   <div>

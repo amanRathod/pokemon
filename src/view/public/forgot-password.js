@@ -23,7 +23,7 @@ const ForgotPassword = () => {
   const _handleSubmit = async (e) => {
     try {
       e.preventDefault();
-      const response = await UserForgotPassword(state);
+      await UserForgotPassword(state);
       state.email = '';
       history.push(ROUTES.LOGIN);
     } catch (err) {

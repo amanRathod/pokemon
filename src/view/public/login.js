@@ -2,8 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
-import FormInputEmail from '../../components/input/email';
-import FormInputPassword from '../../components/input/password';
+import { FormInputEmail, FormInputPassword } from '../../components/input';
 import ValidateEmail from '../../util/validation/email';
 import { UserLogin } from '../../service/auth';
 
